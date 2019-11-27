@@ -79,14 +79,14 @@
 
 
 
-<meta name="description" content="1、添加分享功能  找到主题配置文件（blog \ themes \ next \ _config.yml）,如下修改即可 123baidushare:   type: button  baidushare: true">
+<meta name="description" content="1、添加分享功能  找到主题配置文件（\themes \ next \ _config.yml）,如下修改即可 123baidushare:   type: button  baidushare: true">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo个人博客的细节优化">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%86%E8%8A%82%E4%BC%98%E5%8C%96&#x2F;index.html">
 <meta property="og:site_name" content="冯绍峰">
-<meta property="og:description" content="1、添加分享功能  找到主题配置文件（blog \ themes \ next \ _config.yml）,如下修改即可 123baidushare:   type: button  baidushare: true">
+<meta property="og:description" content="1、添加分享功能  找到主题配置文件（\themes \ next \ _config.yml）,如下修改即可 123baidushare:   type: button  baidushare: true">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-11-27T08:36:46.176Z">
+<meta property="og:updated_time" content="2019-11-27T10:03:43.984Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -383,8 +383,15 @@
         <blockquote>
 <p><strong>1、添加分享功能</strong></p>
 </blockquote>
-<p>找到主题配置文件（blog \ themes \ next \ _config.yml）,如下修改即可</p>
+<p>找到主题配置文件（\themes \ next \ _config.yml）,如下修改即可</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">baidushare: </span><br><span class="line">  type: button</span><br><span class="line">  baidushare: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<blockquote>
+<p><strong>2、修改文章间距</strong></p>
+</blockquote>
+<p>找到 \themes \ next \ source \ css \ _custom \ _custom.styl</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.post &#123;</span><br><span class="line">   margin-top: 0px;    # 上外边距</span><br><span class="line">   margin-bottom: 60px;  # 下外边距</span><br><span class="line">   padding: <span class="number">25</span>px;</span><br><span class="line">   -webkit-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span>px rgba(<span class="number">202</span>, <span class="number">203</span>, <span class="number">203</span>, <span class="number">.5</span>);</span><br><span class="line">   -moz-box-shadow: <span class="number">0</span> <span class="number">0</span> <span class="number">5</span>px rgba(<span class="number">202</span>, <span class="number">203</span>, <span class="number">204</span>, <span class="number">.5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Next官网：<a href="http://theme-next.iissnan.com/theme-settings.html#syntax-highlight-scheme" target="_blank" rel="noopener">Next官网链接</a></p>
 
       
     </div>
@@ -394,6 +401,35 @@
 
     
 
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="我爱吃肉肉 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="我爱吃肉肉 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -564,6 +600,22 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://mail.qq.com/cgi-bin/frame_html?sid=BLl3cB1YTjboeEEc&r=0eb2d1b3a50ec1d3b678e32db5a68098" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-globe"></i>E-Mail</a>
+                  </span>
+                
+            </div>
           
 
           
