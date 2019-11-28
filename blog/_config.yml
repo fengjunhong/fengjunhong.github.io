@@ -103,6 +103,8 @@ theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
+
+# 设置提交github的信息
 deploy:
   type: git
   repo: https://github.com/fengjunhong/fengjunhong.github.io
