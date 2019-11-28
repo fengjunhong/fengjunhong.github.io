@@ -26,3 +26,16 @@ baidushare:
 }
 ```
 Next官网：[Next官网链接](http://theme-next.iissnan.com/theme-settings.html#syntax-highlight-scheme)
+> **3、修改内容区域的宽度**
+
+next主题的默认宽度（width：700px）如下图所示，太窄
+![001.png](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMTEvMjgvV3lMb1JReEdpWjVQU0ROLnBuZw?x-oss-process=image/format,png)
+打开 \themes \ next \ source \ css \ _variables \ custom.styl 添加两行代码即可：
+
+```bash
+# 路径：\themes\next\source\css\_variables\custom.styl
+$main-desktop = 1200px 
+$content-desktop = 900px
+```
+看效果，此时width: 900px
+![005.png](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9pLmxvbGkubmV0LzIwMTkvMTEvMjgvbzZENGtnZnZXckhTalA1LnBuZw?x-oss-process=image/format,png)
