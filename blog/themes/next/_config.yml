@@ -140,6 +140,10 @@ scheme: Pisces
 social:
   GitHub: https://github.com/yourname || github
   E-Mail: https://mail.qq.com/cgi-bin/frame_html?sid=BLl3cB1YTjboeEEc&r=0eb2d1b3a50ec1d3b678e32db5a68098
+  csdn: https://blog.csdn.net/weixin_45493345 
+  # qq: qq
+  # weibo: weibo
+  # Twitter: twitter
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -154,6 +158,10 @@ social_icons:
   icons_only: false
   transition: false
   Github: github
+  csdn: csdn
+  qq: qq
+  weibo: weibo
+  Twitter: twitter
 
 # Blog rolls
 links_icon: link
