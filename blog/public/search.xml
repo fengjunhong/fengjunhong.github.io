@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>测试换电脑hexo</title>
+    <url>/2019/11/28/%E6%B5%8B%E8%AF%95%E6%8D%A2%E7%94%B5%E8%84%91hexo/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>薛之谦-演员</title>
+    <url>/2019/11/28/music/</url>
+    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32507038&auto=1&height=66"></iframe>]]></content>
+      <categories>
+        <category>娱乐</category>
+      </categories>
+      <tags>
+        <tag>歌曲</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo个人博客的细节优化</title>
     <url>/2019/11/27/hexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E7%BB%86%E8%8A%82%E4%BC%98%E5%8C%96/</url>
     <content><![CDATA[<blockquote>
@@ -65,17 +81,6 @@
       <tags>
         <tag>hexo</tag>
         <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>薛之谦-演员</title>
-    <url>/2019/11/25/music/</url>
-    <content><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32507038&auto=1&height=66"></iframe>]]></content>
-      <categories>
-        <category>娱乐</category>
-      </categories>
-      <tags>
-        <tag>歌曲</tag>
       </tags>
   </entry>
 </search>
