@@ -3,7 +3,7 @@ title: vue个人笔记总结
 date: 2019-11-28 09:53:20
 categories: vue
 tags:
-	- 个人笔记
+	- vue
 ---
 ### es6的用法
 
