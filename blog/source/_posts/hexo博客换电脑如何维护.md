@@ -36,3 +36,5 @@ hexo g -d   # 生成并发布
 ### 提交源代码
 前面我们只是更新了master分支的数据
 更新源代码：借助GitHub Desktop上传源代码至hexo_blog分支即可。
+### 总结
+其实就是master分支存储显示文件，hexo_blog分支存储源代码文件
