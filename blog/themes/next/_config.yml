@@ -64,7 +64,7 @@ footer:
     version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
+  # custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -139,12 +139,12 @@ scheme: Pisces
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/yourname || github
-  E-Mail: https://mail.qq.com/cgi-bin/frame_html?sid=BLl3cB1YTjboeEEc&r=0eb2d1b3a50ec1d3b678e32db5a68098
-  csdn: https://blog.csdn.net/weixin_45493345 
-  # qq: qq
-  # weibo: weibo
-  # Twitter: twitter
+  GitHub: https://github.com/fengjunhong/fengjunhong.github.io || github
+  # mailto: https://mail.qq.com/cgi-bin/loginpage || envelope
+  csdn: https://blog.csdn.net/weixin_45493345 || book
+  qq: tencent://message/?uin=964193725&Site=qq&Menu=yes || qq
+  微信: images/WeChat.png || weixin
+  # Twitter: twitte r
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -158,11 +158,11 @@ social_icons:
   enable: true
   icons_only: false
   transition: false
-  Github: github
-  csdn: csdn
+  Github: Github
+  CSDN: csdn
   qq: qq
-  weibo: weibo
-  Twitter: twitter
+  微信: weixin
+  #Twitter: twitter
 
 # Blog rolls
 links_icon: link
@@ -197,7 +197,7 @@ toc:
 
 sidebar:
   # Sidebar Position, available value: left | right (only for Pisces | Gemini).
-  position: right
+  position: left
   #position: right
 
   # Sidebar Display, available value (only for Muse | Mist):
@@ -205,7 +205,7 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggle.
-  display: post
+  display: hide
   # display: always
   # display: hide
   #display: remove
@@ -271,12 +271,12 @@ wechatpay: /images/wechatpay.jpg
 alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
-# Declare license on posts
 # 开启版权声明
+# Declare license on posts
 post_copyright:
-  enable: false
+  enable: true
   license: CC BY-NC-SA 3.0
-  #license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 
 # ---------------------------------------------------------------
@@ -860,3 +860,7 @@ symbols_count_time:
 recent_posts_title: 近期文章
 recent_posts_layout: block
 recent_posts: true
+
+# Online contact 
+daovoice: true
+daovoice_app_id: 93de2cb6
