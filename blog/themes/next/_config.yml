@@ -96,7 +96,7 @@ menu:
   home: /
   #about: /about/ || user
   #tags: /tags/ || tags
-  categories: /categories/
+  #categories: /categories/
   # archives: /archives/ || archive
   archives: /archives/
   tags: /tags/
@@ -106,7 +106,7 @@ menu:
 
 # Enable/Disable menu icons.
 menu_icons:
-  enable: true
+  enable: false
   # Icon Mapping.
   home: /
   about: user
@@ -272,10 +272,11 @@ alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
+# 开启版权声明
 post_copyright:
   enable: false
   license: CC BY-NC-SA 3.0
-  license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
+  #license_url: https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 
 # ---------------------------------------------------------------
@@ -855,3 +856,7 @@ symbols_count_time:
   awl: 4                   # Average Word Length
   wpm: 275                 # Words Per Minute（每分钟阅读词数）
   suffix: mins.
+
+recent_posts_title: 近期文章
+recent_posts_layout: block
+recent_posts: true

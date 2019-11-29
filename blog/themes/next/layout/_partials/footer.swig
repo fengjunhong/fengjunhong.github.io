@@ -20,10 +20,9 @@
     #}{{ totalcount(site, '0,0.0a') }}{#
   #}</span>
   {% endif %}
+</div>
 
-
-
-  <!-- 网站运行时间的设置 -->
+<!-- 网站运行时间的设置 -->
 <span id="timeDate">载入天数...</span>
 <span id="times">载入时分秒...</span>
 <script>
@@ -43,12 +42,7 @@
 setInterval("createtime()",250);
 </script>
 
-
-</div>
-
-
-
-
+<!--设置访问量-->
 {% if theme.footer.counter %}
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <span id="busuanzi_container_site_pv">本站总访问量<span id="busuanzi_value_site_pv"></span>次</span>
