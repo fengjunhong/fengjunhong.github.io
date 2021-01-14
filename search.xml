@@ -4,6 +4,77 @@
   
     
     <entry>
+      <title>java文件下载</title>
+      <link href="/2021/01/14/java%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/"/>
+      <url>/2021/01/14/java%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>方式一、采用文件输出流</p></blockquote><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 文件下载</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/downServiceAgreement"</span>)</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">downServiceAgreement</span><span class="params">(HttpServletRequest request, HttpServletResponse response)</span></span>&#123;</span><br><span class="line">    AuthCompanyUser user = CurrentUserHolder.getUser();</span><br><span class="line">    <span class="keyword">assert</span> user != <span class="keyword">null</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="comment">// 文件的绝对路径</span></span><br><span class="line">        String downCertApplyPath = orderService.downServiceAgreement();</span><br><span class="line">        <span class="comment">//告诉浏览器输出内容为流</span></span><br><span class="line">        response.setContentType(<span class="string">"application/octet-stream"</span>);</span><br><span class="line">        response.setHeader(<span class="string">"Content-Disposition"</span>, <span class="string">"attachment;fileName= "</span> + URLEncoder.encode(<span class="string">"文件名称"</span>, <span class="string">"utf-8"</span>) + <span class="string">".pdf"</span>);</span><br><span class="line">        OutputStream outputStream = response.getOutputStream();</span><br><span class="line">        FileInputStream fileInputStream = <span class="keyword">new</span> FileInputStream(downCertApplyPath);</span><br><span class="line">        <span class="comment">//缓存区</span></span><br><span class="line">        <span class="keyword">byte</span>[] buffer = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">        <span class="keyword">while</span> (fileInputStream.read(buffer) != -<span class="number">1</span>) &#123;</span><br><span class="line">            outputStream.write(buffer);</span><br><span class="line">        &#125;</span><br><span class="line">        outputStream.flush();</span><br><span class="line">        fileInputStream.close();</span><br><span class="line">        outputStream.close();</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 删除当前文件</span></span><br><span class="line">        FileUtil.deleteFile(<span class="keyword">new</span> File(downCertApplyPath));</span><br><span class="line"></span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>前端代码：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.location.href = <span class="string">'$&#123;ctx&#125;/downServiceAgreement'</span>;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> java </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> java </tag>
+            
+            <tag> 文件下载 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>前端知识汇总</title>
+      <link href="/2020/08/31/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/"/>
+      <url>/2020/08/31/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%B1%87%E6%80%BB/</url>
+      
+        <content type="html"><![CDATA[<h2 id="jquery知识汇总"><a href="#jquery知识汇总" class="headerlink" title="jquery知识汇总"></a>jquery知识汇总</h2><h3 id="鼠标箭头变手势"><a href="#鼠标箭头变手势" class="headerlink" title="鼠标箭头变手势"></a>鼠标箭头变手势</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">style=<span class="string">"cursor:pointer;"</span></span><br></pre></td></tr></table></figure><h2 id="layui知识汇总"><a href="#layui知识汇总" class="headerlink" title="layui知识汇总"></a>layui知识汇总</h2><h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">layer.tips(<span class="string">'个人证书，请点击我'</span>, <span class="string">'#personCert'</span>, &#123;</span><br><span class="line">    tips: [<span class="number">1</span>, <span class="string">'rgb(19, 97, 254)'</span>],</span><br><span class="line">    tipsMore : <span class="literal">true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><p>参数说明：``</p><ol><li><code>options:tips的配置型[tips位置：1上；2右；3下；4左,背景颜色]</code></li><li><code>tipsMore设置是否允许弹出多个tips</code><a id="more"></a></li></ol><h3 id="input"><a href="#input" class="headerlink" title="input"></a>input</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span> <span class="attr">lay-reqText</span>=<span class="string">"请输入qq邮箱"</span> <span class="attr">lay-verify</span>=<span class="string">"required|email"</span></span></span><br><span class="line"><span class="tag">       <span class="attr">autocomplete</span>=<span class="string">"off"</span>  <span class="attr">class</span>=<span class="string">"layui-input"</span>&gt;</span></span><br></pre></td></tr></table></figure><p>参数说明：</p><ol><li>lay-reqText：自定义非空提示语</li><li>autocomplete=”off” : 关闭显示历史记录</li></ol><h3 id="data-属性"><a href="#data-属性" class="headerlink" title="data-属性"></a>data-属性</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">"checkbox"</span> name=<span class="string">"signType"</span> value=<span class="string">"0"</span> data-price=<span class="string">"$&#123;certPrice.projectManagerSign&#125;"</span> lay-skin=<span class="string">"primary"</span> title=<span class="string">"项目经理章"</span> lay-filter=<span class="string">"signType"</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">// .....（省略部分代码）</span></span><br><span class="line"></span><br><span class="line">form.on(<span class="string">'checkbox(signType)'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(data.elem); <span class="comment">//得到checkbox原始DOM对象</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 将DOM对象转换为jquery对象，再调用attr()方法</span></span><br><span class="line">  <span class="keyword">var</span> price = $(data.elem).attr(<span class="string">"data-price"</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h3 id="radio"><a href="#radio" class="headerlink" title="radio"></a>radio</h3><p><code>说明：用于多组单选框，联动选中的效果</code></p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">// 企业类型：招、投标单位</span></span><br><span class="line">form.on(<span class="string">'radio(companyType)'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">data</span>)</span>&#123;</span><br><span class="line">    <span class="comment">// 联动 ==&gt; 证书类型</span></span><br><span class="line">    <span class="keyword">var</span> certType = <span class="built_in">document</span>.getElementsByName(<span class="string">"certType"</span>);</span><br><span class="line">    $(certType[data.value]).next().click();</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h3 id="checkbox"><a href="#checkbox" class="headerlink" title="checkbox"></a>checkbox</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// checkbox是否被选中</span></span><br><span class="line"><span class="keyword">var</span> companyCertIsChecked = $(<span class="string">"input[name='userType']"</span>).is(<span class="string">':checked'</span>);</span><br><span class="line"><span class="comment">// 第一个checkbox是否被选中</span></span><br><span class="line"><span class="keyword">var</span> companyCertIsChecked = $(<span class="string">"input[name='userType']"</span>).get(<span class="number">0</span>).checked;</span><br></pre></td></tr></table></figure><h3 id="switch-开关按钮"><a href="#switch-开关按钮" class="headerlink" title="switch(开关按钮)"></a>switch(开关按钮)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">form.on(&apos;switch(filter)&apos;, function(data)&#123;</span><br><span class="line">    //开关是否开启，true或者false</span><br><span class="line">    var checked = data.elem.checked;</span><br><span class="line">    var _index = layer.confirm(&apos;确定要进行此操作吗？&apos;, &#123;icon: 3,</span><br><span class="line">        btn: [&apos;确定&apos;,&apos;取消&apos;] //按钮</span><br><span class="line">    &#125;, function()&#123;</span><br><span class="line">        layer.close(_index)</span><br><span class="line">    &#125;, function()&#123;</span><br><span class="line">        data.elem.checked=!checked; // 取消</span><br><span class="line">        form.render();</span><br><span class="line">    &#125;);</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure><h3 id="layer-msg"><a href="#layer-msg" class="headerlink" title="layer.msg"></a>layer.msg</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var loadindex = layer.msg(&apos;数据保存中，请稍等...&apos;, &#123;</span><br><span class="line">    icon: 16,</span><br><span class="line">    shade: [0.3, &apos;#393D49&apos;],</span><br><span class="line">    time: 0</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>薛之谦-演员</title>
+      <link href="/2020/08/29/music/"/>
+      <url>/2020/08/29/music/</url>
+      
+        <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32507038&auto=1&height=66"></iframe>]]></content>
+      
+      
+      <categories>
+          
+          <category> 娱乐 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 歌曲 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>第一个单页面应用</title>
       <link href="/2019/12/04/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8/"/>
       <url>/2019/12/04/%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%8D%95%E9%A1%B5%E9%9D%A2%E5%BA%94%E7%94%A8/</url>
@@ -153,31 +224,6 @@
         <tags>
             
             <tag> vue </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>薛之谦-演员</title>
-      <link href="/2019/11/28/music/"/>
-      <url>/2019/11/28/music/</url>
-      
-        <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=32507038&auto=1&height=66"></iframe>]]></content>
-      
-      
-      <categories>
-          
-          <category> 娱乐 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 歌曲 </tag>
             
         </tags>
       
